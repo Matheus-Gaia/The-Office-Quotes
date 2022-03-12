@@ -1,13 +1,62 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  min-height: 100vh;
+  max-width: 100%;
+  background-image: url('./img/background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Special Elite', cursive;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  height: 55vh;
+  padding: 40px;
+}
+
+.char {
+  align-self: flex-end;
+  font-weight: 600;
+}
+
+button {
+  background-color: #403f43;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 7px 6px 17px 0px rgba(0,0,0,0.49);
+  align-self: center;
+}
+
+@media(min-width: 750px) {
+  .App {
+    height: 85vh;
+  }
+ }
+
+@media(max-width: 574px) {
+  body {
+    background-position: -588px;
+  }
+
+  .App {
+    width: 80%;
+  }
+
+  .char, button {
+    align-self: flex-start;
+  }
+}
+
